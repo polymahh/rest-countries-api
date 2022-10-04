@@ -2,10 +2,17 @@
 
 @tailwind base;
 @tailwind components;
+
+.maxw {
+  @apply max-w-[1440px] m-auto;
+}
 @tailwind utilities;
 
 @layer base {
   html {
     font-family: 'Nunito Sans', sans-serif;
+  }
+  body {
+    @apply bg-LM-Background;
   }
 }

@@ -1,8 +1,11 @@
+import { HiSearch } from 'react-icons/hi'
+
 const Main = () => {
   return (
-    <main className="bg-LM-Background grid ">
-      <div className="flex flex-col items-start px-4 py-6 ">
-        <div className="shadow- rounded-lg w-full overflow-hidden">
+    <div className=" grid maxw ">
+      <div className="flex flex-col items-start p-6 gap-6 ">
+        <div className="shadow-md rounded-lg w-full overflow-hidden flex items-center px-4 py-3 bg-white">
+          <HiSearch className="text-stone-400 text-2xl" />
           <input
             type="text"
             placeholder="Search for a country..."
@@ -10,15 +13,17 @@ const Main = () => {
           ></input>
         </div>
 
-        <select name="region" id="region">
-          <option value="africa">Africa</option>
-          <option value="america">America</option>
-          <option value="asia">Asia</option>
-          <option value="europe">Europe</option>
-          <option value="oceania">Oceania</option>
-        </select>
+        <div className="p-4 bg-white rounded-md shadow-md">
+          <select name="region" id="region" className="pr-16  ">
+            <option value="africa">Africa</option>
+            <option value="america">America</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="oceania">Oceania</option>
+          </select>
+        </div>
       </div>
-    </main>
+    </div>
   )
 }
 export default Main
