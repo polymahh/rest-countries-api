@@ -15,4 +15,7 @@
   body {
     @apply bg-LM-Background;
   }
+  input:focus {
+    outline: none;
+  }
 }

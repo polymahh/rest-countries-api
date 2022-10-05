@@ -1,4 +1,5 @@
 import { HiSearch } from 'react-icons/hi'
+import SelectOptions from './SelectOptions'
 
 const Main = () => {
   return (
@@ -12,8 +13,8 @@ const Main = () => {
             className=" px-6 py-2 text-LM-Input w-full "
           ></input>
         </div>
-
-        <div className="p-4 bg-white rounded-md shadow-md">
+        <SelectOptions />
+        {/* <div className="p-4 bg-white rounded-md shadow-md">
           <select name="region" id="region" className="pr-16  ">
             <option value="africa">Africa</option>
             <option value="america">America</option>
@@ -21,7 +22,7 @@ const Main = () => {
             <option value="europe">Europe</option>
             <option value="oceania">Oceania</option>
           </select>
-        </div>
+        </div> */}
       </div>
     </div>
   )
