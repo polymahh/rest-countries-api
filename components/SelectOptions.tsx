@@ -23,7 +23,7 @@ const SelectOptions = () => {
         />
       </button>
       {clicked && (
-        <div className="flex flex-col gap-3 py-4 px-8 bg-white rounded-md font-semibold absolute top-16 shadow-md w-full ">
+        <div className="flex flex-col gap-2 py-4 px-8 bg-white rounded-md font-semibold absolute top-16 shadow-md w-full ">
           <button
             className="cursor-pointer text-left hover:bg-LM-Background"
             onClick={() => setCountry('Africa')}

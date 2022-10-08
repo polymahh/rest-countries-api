@@ -1,4 +1,5 @@
 import { HiSearch } from 'react-icons/hi'
+import Countries from './Countries'
 import SelectOptions from './SelectOptions'
 
 const Main = () => {
@@ -14,15 +15,7 @@ const Main = () => {
           ></input>
         </div>
         <SelectOptions />
-        {/* <div className="p-4 bg-white rounded-md shadow-md">
-          <select name="region" id="region" className="pr-16  ">
-            <option value="africa">Africa</option>
-            <option value="america">America</option>
-            <option value="asia">Asia</option>
-            <option value="europe">Europe</option>
-            <option value="oceania">Oceania</option>
-          </select>
-        </div> */}
+        <Countries />
       </div>
     </div>
   )
