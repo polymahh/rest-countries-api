@@ -1,8 +1,27 @@
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 import { HiSearch } from 'react-icons/hi'
 import Countries from './Countries'
 import SelectOptions from './SelectOptions'
 
 const Main = () => {
+  const [countries, setCountries] = useState(null)
+  const [err, setErr] = useState(null)
+
+  useEffect(() => {
+    getCountries()
+  }, [])
+
+  const getCountries = async () => {
+    try {
+      const data = await axios.get('https://restcountries.com/v3.1/all')
+      setCountries(data)
+      console.log(data)
+    } catch (err) {
+      console.log('err')
+      setErr(err)
+    }
+  }
   return (
     <div className=" grid maxw ">
       <div className="flex flex-col items-start p-6 gap-6 ">
@@ -15,7 +34,7 @@ const Main = () => {
           ></input>
         </div>
         <SelectOptions />
-        <Countries />
+        <Countries countries={countries} />
       </div>
     </div>
   )

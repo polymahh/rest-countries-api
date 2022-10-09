@@ -1,4 +1,4 @@
-const Countries = () => {
+const Countries = ({ countries }) => {
   return (
     <div className=" w-full px-8">
       <div className="bg-white rounded-lg shadow-lg w-full overflow-hidden pb-8">
