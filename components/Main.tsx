@@ -15,7 +15,15 @@ const Main = () => {
   const [region, setRegion] = useState(null)
 
   useEffect(() => {
-    getCountries()
+    const getCountries = async () => {
+      const result = await axios.get('https://restcountries.com/v3.1/all')
+      const data = await result.data
+      setPages(Math.round(data.length / 25))
+      setInitialData(data)
+      setInitialCountries(data)
+    }
+
+    getCountries().catch(console.error)
   }, [])
 
   useEffect(() => {
@@ -28,24 +36,15 @@ const Main = () => {
   }, [region])
 
   useEffect(() => {
+    if (!region) {
+      setCountries(initialCountries)
+    }
     if (initialCountries) {
       setPages(Math.ceil(initialCountries.length / 25))
       const items = current * 25
       setCountries(initialCountries.slice(items - 25, items))
     }
   }, [current, initialCountries])
-
-  const getCountries = async () => {
-    try {
-      const data = await axios.get('https://restcountries.com/v3.1/all')
-      setPages(Math.round(data.data.length / 25))
-      setInitialData(data.data)
-      setInitialCountries(initialData)
-    } catch (err) {
-      console.log('err')
-      setErr(err)
-    }
-  }
 
   return (
     <div className=" grid maxw ">
