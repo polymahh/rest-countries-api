@@ -1,7 +1,7 @@
 import React from 'react'
 export function Pagination({ pages, setCurrent, current }) {
   return (
-    <div className="m-auto">
+    <div className="m-auto flex flex-wrap justify-around">
       {Array.from(Array(pages).keys()).map((page) => {
         return (
           <button

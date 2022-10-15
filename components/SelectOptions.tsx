@@ -6,7 +6,7 @@ const SelectOptions = ({ setRegion }) => {
   const [clicked, setClicked] = useState(false)
   const [country, setCountry] = useState('Filter by Region')
 
-  const regions = ['Africa', 'America', 'Asia', 'Europe', 'Oceania']
+  const regions = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
 
   return (
     <div className="relative w-52 ">
@@ -34,6 +34,7 @@ const SelectOptions = ({ setRegion }) => {
                 setCountry(region)
                 setClicked(false)
               }}
+              onBlur={() => setClicked(!clicked)}
             >
               {region}
             </button>

@@ -1,9 +1,15 @@
+import Image from 'next/image'
 import React from 'react'
 export function Country({ country }) {
   return (
-    <div className="bg-white rounded-lg shadow-lg w-full overflow-hidden pb-8 mb-10">
+    <div className="bg-white rounded-lg shadow-lg max-w-[320px] overflow-hidden pb-8 mb-10">
       <div>
-        <img src="hero-img.jpg" alt={country.flag} />
+        <Image
+          src={country.flags.png}
+          alt={country.flag}
+          width={320}
+          height={230}
+        />
       </div>
       <div className="px-8">
         <h1 className="font-extrabold text-lg pb-2 pt-6">
