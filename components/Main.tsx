@@ -1,12 +1,13 @@
 import { Pagination } from './Pagination'
 import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import { HiSearch } from 'react-icons/hi'
 import Countries from './Countries'
 import SelectOptions from './SelectOptions'
+import { countryContext } from '../Context/CountryContext'
 
 const Main = () => {
-  const [initialData, setInitialData] = useState(null)
+  // const [initialData, setInitialData] = useState(null)
   const [initialCountries, setInitialCountries] = useState(null)
   const [countries, setCountries] = useState(null)
   const [current, setCurrent] = useState(1)
@@ -14,6 +15,8 @@ const Main = () => {
   const [region, setRegion] = useState(null)
   const [query, setQuery] = useState('')
   // const [filteredCountries, setfilteredCountries] = useState(null)
+
+  const { initialData, setInitialData } = useContext(countryContext)
 
   // const filteredCountries =
   //   query === ''
