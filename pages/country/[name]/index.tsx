@@ -11,9 +11,9 @@ const Country = () => {
     initialData,
   } = useContext(countryContext)
   return (
-    <div className=" p-8 grid gap-16 md:grid-cols-[minmax(1fr,300px)] ">
+    <div className=" p-8 grid gap-16 md:grid-cols-[minmax(1fr,300px)] dark:bg-DM-Background dark:text-white ">
       <div className="md:col-span-2">
-        <button className=" bg-white py-1 px-6 mb-4 shadow-[0_1px_5px_2px_rgba(0,0,0,0.3)] ">
+        <button className=" bg-white dark:bg-DM-Elements py-1 px-6 mb-4 shadow-[0_1px_5px_2px_rgba(0,0,0,0.3)] ">
           <Link href="/">
             <span>
               <HiArrowNarrowLeft className="inline-block mr-2" />
@@ -94,7 +94,7 @@ const Country = () => {
               return (
                 <button
                   key={idx}
-                  className="shadow-[0_1px_5px_2px_rgba(0,0,0,0.1)] bg-white  px-8"
+                  className="shadow-[0_1px_5px_2px_rgba(0,0,0,0.1)] bg-white dark:bg-DM-Elements  px-8"
                   onClick={() => setCurrentCountry(result)}
                 >
                   <Link

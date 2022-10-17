@@ -7,7 +7,7 @@ export function Country({ country }) {
   const { setCurrentCountry } = useContext(countryContext)
 
   return (
-    <div className="bg-white rounded-lg shadow-lg max-w-[320px] overflow-hidden pb-8 mb-10">
+    <div className="bg-white dark:bg-DM-Elements dark:text-white rounded-lg shadow-lg max-w-[320px] overflow-hidden pb-8 mb-10">
       <div
         onClick={() => setCurrentCountry(country)}
         className="cursor-pointer"
