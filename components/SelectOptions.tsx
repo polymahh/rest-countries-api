@@ -12,7 +12,7 @@ const SelectOptions = ({ setRegion }) => {
     <div className="relative w-52 ">
       <button
         onClick={() => setClicked(!clicked)}
-        className="w-full px-6 py-4 bg-white rounded-md shadow-md flex justify-between items-center "
+        className="w-full px-6 py-4 bg-white dark:bg-DM-Elements dark:text-white rounded-md shadow-md flex justify-between items-center "
       >
         <span className=" font-semibold">{country}</span>
         <Image
@@ -24,7 +24,7 @@ const SelectOptions = ({ setRegion }) => {
         />
       </button>
       {clicked && (
-        <div className="flex flex-col gap-2 py-4 px-8 bg-white rounded-md font-semibold absolute top-16 shadow-md w-full ">
+        <div className="flex flex-col gap-2 py-4 z-10 px-8 bg-white rounded-md font-semibold absolute top-16 shadow-md w-full ">
           {regions.map((region) => (
             <button
               key={region}

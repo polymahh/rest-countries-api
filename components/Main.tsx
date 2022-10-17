@@ -7,25 +7,14 @@ import SelectOptions from './SelectOptions'
 import { countryContext } from '../Context/CountryContext'
 
 const Main = () => {
-  // const [initialData, setInitialData] = useState(null)
   const [initialCountries, setInitialCountries] = useState(null)
   const [countries, setCountries] = useState(null)
   const [current, setCurrent] = useState(1)
   const [pages, setPages] = useState(0)
   const [region, setRegion] = useState(null)
   const [query, setQuery] = useState('')
-  // const [filteredCountries, setfilteredCountries] = useState(null)
 
   const { initialData, setInitialData } = useContext(countryContext)
-
-  // const filteredCountries =
-  //   query === ''
-  //     ? countries
-  //     : countries?.filter((country) =>
-  //         country.name.common
-  //           .toLowerCase()
-  //           .includes(query?.toLowerCase().replace(/\s+/g, ''))
-  //       )
 
   useEffect(() => {
     const getCountries = async () => {
@@ -71,7 +60,7 @@ const Main = () => {
   return (
     <div className=" grid maxw ">
       <div className="flex flex-col items-start p-6 gap-6 ">
-        <div className="shadow-md rounded-lg w-full overflow-hidden flex items-center px-4 py-3 bg-white">
+        <div className="shadow-md rounded-lg w-full overflow-hidden flex items-center px-4 py-3 bg-white dark:bg-DM-Elements">
           <HiSearch className="text-stone-400 text-2xl" />
           <input
             type="text"
