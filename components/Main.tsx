@@ -59,7 +59,7 @@ const Main = () => {
 
   return (
     <div className=" grid maxw ">
-      <div className="flex flex-col items-start p-6 gap-6 dark:bg-DM-Background min-h-[90vh] ">
+      <div className="flex flex-col items-start p-6 gap-6 dark:bg-DM-Background ">
         <div className="flex gap-6 flex-col w-full md:flex-row md:justify-between my-6">
           <div className="shadow-md rounded-lg w-full md:w-auto overflow-hidden flex items-center px-4 py-2 bg-white dark:bg-DM-Elements">
             <HiSearch className="text-stone-400 text-2xl dark:text-white" />

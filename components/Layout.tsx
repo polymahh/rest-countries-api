@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
         <header className="shadow-md bg-white">
           <Header />
         </header>
-        <main>{children}</main>
+        <main className="h-[93vh] dark:bg-DM-Background">{children}</main>
       </div>
     </CountryProvider>
   )
