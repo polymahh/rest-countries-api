@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
   return (
     <CountryProvider>
       <div>
-        <header className="shadow-md bg-white">
+        <header className="shadow-md bg-white dark:bg-DM-Elements">
           <Header />
         </header>
         <main className="h-[93vh] dark:bg-DM-Background">{children}</main>
