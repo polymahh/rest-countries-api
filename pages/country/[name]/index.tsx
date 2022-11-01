@@ -11,7 +11,7 @@ const Country = () => {
     initialData,
   } = useContext(countryContext)
   return (
-    <div>
+    <div className="maxw">
       {country ? (
         <div className=" p-8 grid gap-16 md:grid-cols-[minmax(1fr,300px)] dark:bg-DM-Background dark:text-white ">
           <div className="md:col-span-2">
